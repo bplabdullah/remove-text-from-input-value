@@ -1,0 +1,31 @@
+// CODE 1
+
+$(document).ready(function() {
+
+$(document ).on('click','.bcpo-button-parent input',function(){
+    $('.bcpo-button-parent input').each(function(index){ 
+        var removeText = "<span>";
+        var removeText2 = "</span>";
+        var currentVal = $(this).val();
+        let newVal = currentVal.replace(removeText, "");
+        let newVal2 = newVal.replace(removeText2, "");
+        $(this).val(newVal2);
+        });
+});
+});
+
+// CODE 2
+
+$(document).ready(function() {
+      // Get the <span> elements within the desired context
+      var spanElements = $('tr.cart__row.responsive-table__row td:nth-child(2)');
+
+      // Iterate over each <span> element
+      spanElements.each(function() {
+        var spanText = $(this).text();
+        var modifiedText = spanText.replace('<span>', '');
+        $(this).text(modifiedText);
+      });
+    });
+
+
